@@ -127,3 +127,8 @@ let businesses = [
         return obj;
     }, {});
     countResult;
+    const countResult2 = count2.reduce((obj, n) => {
+        obj[n] = ++obj[n] || 1;
+        return obj;
+    }, {})
+    countResult2;
