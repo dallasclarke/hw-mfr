@@ -109,4 +109,21 @@ let businesses = [
     result2;
     const result3 = arr3.filter(n => n % 1 === 0)
     .map(n => n * 5);
-    result3
+    result3;
+
+    // 6.
+
+// - Count the number times the same element value appears in an array and display your answer in an object with the element as the key and the number of times as the value
+// - Use reduce and use its second argument to initialize the empty object
+// - The properties in the object will have a string for the key and a number for the value
+// - The key in each property should be the value in the array we are counting.
+// - The value in the object property should be the number of times a value appears in the original array.
+    const count1 = [5,3,2,5,6]; //should be {'5':2,'3':1,'2':1,'6':1}
+    const count2 = [3,1,2,5,2,5,7,5]; // should be { '1': 1, '2': 2, '3': 1, '5': 3, '7': 1 }
+
+    const countResult = count1.reduce((obj, n) => {
+        // Need to turn obj properties to string...
+        obj[n] = ++obj[n] || 1;
+        return obj;
+    }, {});
+    countResult;
